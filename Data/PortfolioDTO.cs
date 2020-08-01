@@ -24,7 +24,7 @@ namespace crai.Data
 
         public List<string> Role { get; set; }
 
-        public List<string> Renderings { get; set; }
+        public List<string> Media { get; set; }
 
         public string WriteUp { get; set; }
 
