@@ -16,7 +16,7 @@ namespace crai.Data
 
         public bool Downloadable { get; set; }
 
-        public List<string> Media { get; set; }
+        public string MediaType { get; set; }
 
         public string Link { get; set; }
     }
