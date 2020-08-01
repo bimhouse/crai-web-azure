@@ -1,0 +1,17 @@
+<p *ngIf="!item"><em>Loading...</em></p>
+<h2 *ngIf="item">{{item.fields.title}}</h2>
+<img [src]="item.fields.thumb[0].thumbnails.large.url" />
+
+<dl>
+    <dt class="mat-small">Client</dt>
+    <dd class="mat-body-2">{{item.fields.clientName}}</dd>
+    <dt class="mat-small">Location</dt>
+    <dd class="mat-body-2">{{item.fields.location}}</dd>
+    <dt class="mat-small">Size</dt>
+    <dd class="mat-body-2">{{item.fields.sf}} sf</dd>
+    <dt class="mat-small">Project</dt>
+    <dd class="mat-body-2">{{item.fields.project}}</dd>
+    <dt class="mat-small">Role</dt>
+    <dd class="mat-body-2">{{item.fields.role}}</dd>
+</dl>
+<div>{{item.fields.writeUp}}</div>

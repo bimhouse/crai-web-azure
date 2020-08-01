@@ -1,0 +1,31 @@
+<p *ngIf="!portfolio"><em>Loading...</em></p>
+<mat-sidenav-container>
+
+
+
+    <mat-sidenav-content role="region">
+        <mat-card *ngFor="let item of portfolio">
+            <!--
+            <mat-card-header>
+                <mat-card-title>Project</mat-card-title>
+            </mat-card-header>
+                -->
+            <!-- <img mat-card-image [src]="item.fields.thumb[0].url" /> -->
+            <img mat-card-image [src]="item.fields.thumb[0].thumbnails.large.url" />
+            <mat-card-content>
+                <dl>
+                    <dt class="mat-small">Title</dt>
+                    <dd class="mat-body-2">{{item.fields.title}}</dd>
+                    <dt class="mat-small">Subtitle</dt>
+                    <dd class="mat-body-2">{{item.fields.subtitle}}</dd>
+                    <dt class="mat-small">Client</dt>
+                    <dd class="mat-body-2">{{item.fields.clientName}}</dd>
+                </dl>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" [routerLink]="['/work/'+item.id]" [queryParams]="{id: item.id}">LIKE</button>
+                <button mat-button color="accent">SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
