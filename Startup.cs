@@ -29,7 +29,7 @@ namespace crai
                                   builder =>
                                   {
                                       builder.WithOrigins("http://localhost:4200",
-                                                          "https://crai-web.netlify.com");
+                                                          "https://crai-web.netlify.app");
                                   });
             });
 
