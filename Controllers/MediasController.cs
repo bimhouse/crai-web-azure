@@ -55,25 +55,13 @@ namespace crai.Controllers
                     if (response.Success)
                     {
 
-                        media.AddRange(response.Records.Where(x => x.Id == id).ToList());
+                        media.AddRange(response.Records.Where(x => x.Fields.Project[0] == id).ToList());
                         offset = response.Offset;
                     }
-
- /*                   foreach (var item in media)
-                    {
-                        if (item.Fields.Project.Count == 1)
-                        {
-                            var match = clients.Find(c => c.Id == item.Fields.Client[0]);
-                            if (match != null)
-                            {
-                                item.Fields.ClientName = match.Fields.Name;
-                            }
-                        }
-                    } */
                 }
             } while (offset != null);
 
-            return Ok(media.FirstOrDefault());
+            return Ok(media);
         }
     }
 }

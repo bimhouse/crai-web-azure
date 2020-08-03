@@ -14,17 +14,15 @@ namespace crai.Data
 
         public List<string> Client { get; set; }
 
-        public string Size { get; set; }
-
         public string Project { get; set; }
 
         public int? Sf { get; set; }
 
         public List<AirtableAttachment> Thumb { get; set; }
 
-        public List<string> Role { get; set; }
+        public List<string> ProjectRole { get; set; }
 
-        public List<string> Media { get; set; }
+//        public List<string> Media { get; set; }
 
         public string WriteUp { get; set; }
 

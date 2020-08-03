@@ -9,16 +9,17 @@ export interface Fields {
   subtitle: string,
   location: string,
   client: string[],
-  size: string,
   project: string,
   sf: number,
-  role: string[],
+  projectRole: string[],
+  projectType: string,
   writeUp: string,
   active: boolean,
   constructionStatus: boolean,
-  clientName: string
+  clientName: string,
+  thumb: Thumb
 }
-/*
+
 export interface Thumb {
   id: string,
   url: string,
@@ -26,5 +27,3 @@ export interface Thumb {
   size: number,
   type: string
 }
-*/
-//public IList < Thumb > thumb { get; set; }

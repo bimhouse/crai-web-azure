@@ -10,7 +10,7 @@ namespace crai.Data
 
         public string Description { get; set; }
 
-        public List<AirtableAttachment> Attachments { get; set; }
+        public List<AirtableAttachment> Attachment { get; set; }
 
         public List<string> Project { get; set; }
 
