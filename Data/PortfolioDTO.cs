@@ -22,7 +22,9 @@ namespace crai.Data
 
         public List<string> ProjectRole { get; set; }
 
-//        public List<string> Media { get; set; }
+        public string ProjectType { get; set; }
+
+        //        public List<string> Media { get; set; }
 
         public string WriteUp { get; set; }
 
